@@ -7,41 +7,37 @@
 body {
   font-size: 14px;
   width: 100%;
+  max-width: 1440px;
   background-color: hsl(30deg, 38%, 92%);
 }
 
-main .wrapper-project {
+.wrapper-project {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  height: 100%;
-  max-width: 1440px;
-  border-radius: 10px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
   position: absolute;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
-main .wrapper-project .img-project {
+.wrapper-project .img-project {
   width: 100%;
-  height: 100%;
-  background-image: url(../images/image-product-desktop.jpg);
-  background-size: cover;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
 }
-main .wrapper-project .content-project {
+.wrapper-project .img-project img {
   width: 100%;
-  height: 100%;
+  max-width: 800px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.wrapper-project .content-project {
+  width: 100%;
   padding: 30px;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   background-color: hsl(0deg, 0%, 100%);
 }
-main .wrapper-project .content-project h4 {
+.wrapper-project .content-project h4 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: hsl(228deg, 12%, 48%);
@@ -50,24 +46,129 @@ main .wrapper-project .content-project h4 {
   margin-bottom: 20px;
   font-size: 18px;
 }
-main .wrapper-project .content-project h2 {
+.wrapper-project .content-project h2 {
   font-family: "Fraunces", serif;
-  font-size: 48px;
+  font-size: 49px;
   text-align: left;
   line-height: 50px;
   margin-bottom: 20px;
 }
-main .wrapper-project .content-project p {
+.wrapper-project .content-project p {
   color: hsl(228deg, 12%, 48%);
   font-family: "Montserrat", sans-serif;
   line-height: 30px;
-  font-size: 18px;
+  font-size: 21px;
+  margin-bottom: 20px;
 }
-main .wrapper-project .content-project .price-wrapper {
+.wrapper-project .content-project .price-wrapper {
   display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 }
-main .wrapper-project .content-project .price-wrapper span:first-child {
+.wrapper-project .content-project .price-wrapper span:first-child {
   font-size: 50px;
   font-family: "Fraunces", serif;
   color: hsl(158deg, 36%, 37%);
+  margin-right: 20px;
+}
+.wrapper-project .content-project .price-wrapper span:last-child {
+  font-size: 20px;
+  color: hsl(228deg, 12%, 48%);
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.wrapper-project .content-project .submit {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  background-color: hsl(158deg, 36%, 37%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 20px;
+  border: none;
+}
+.wrapper-project .content-project .submit .button-wrapper {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-project .content-project .submit .button-wrapper img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+@media (max-width: 815px) {
+  .wrapper-project {
+    display: block;
+    width: 90%;
+    margin: 30px 20px 30px 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 30px auto;
+    transform: translate(0, 0);
+  }
+  .wrapper-project .img-project {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .wrapper-project .img-project img {
+    content: url(../images/image-product-mobile.jpg);
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  .wrapper-project .content-project {
+    padding: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: -4px;
+  }
+  .wrapper-project .content-project h2 {
+    font-size: 34px;
+    line-height: 32px;
+  }
+  .wrapper-project .content-project p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .wrapper-project .content-project .price-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .wrapper-project .content-project .price-wrapper span:first-child {
+    font-size: 30px;
+  }
+  .wrapper-project .content-project .price-wrapper span:last-child {
+    font-size: 16px;
+  }
+  .wrapper-project .content-project .submit {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: hsl(158deg, 36%, 37%);
+    color: hsl(0deg, 0%, 100%);
+    font-size: 16px;
+    border: none;
+  }
+  .wrapper-project .content-project .submit .button-wrapper {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper-project .content-project .submit .button-wrapper img {
+    width: 22px;
+    height: 22px;
+    margin-right: 15px;
+  }
 }/*# sourceMappingURL=styles.css.map */

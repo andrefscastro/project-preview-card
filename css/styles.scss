@@ -15,80 +15,199 @@ $font-secondary: 'Fraunces', serif;
 body {
     font-size: 14px;
     width: 100%;
+    max-width: 1440px;
     background-color: $cream;
 }
 
-main {
+.wrapper-project {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    .img-project {
+        width: 100%;
+        
+        img {
+            width: 100%;
+            max-width: 800px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+    }
+
+    .content-project {
+        width: 100%;
+        padding: 30px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: $white;
+
+        h4 {
+            font-family: $font-primary;
+            text-transform: uppercase;
+            color: $dark-grayish-blue;
+            font-weight: 500;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        h2 {
+            font-family: $font-secondary;
+            font-size: 49px;
+            text-align: left;
+            line-height: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: $dark-grayish-blue;
+            font-family: $font-primary;
+            line-height: 30px;
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .price-wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            span {
+
+                &:first-child {
+                    font-size: 50px;
+                    font-family: $font-secondary;
+                    color: $dark-cyan;
+                    margin-right: 20px;
+                }
+
+                &:last-child {
+                    font-size: 20px;
+                    color: $dark-grayish-blue;
+                    font-weight: 500;
+                    text-decoration: line-through;
+                }
+            }
+        }
+
+        .submit {
+            font-family: $font-primary;
+            width: 100%;
+            height: 60px;
+            border-radius: 10px;
+            background-color: $dark-cyan;
+            color: $white;
+            font-size: 20px;
+            border: none;
+
+            .button-wrapper {
+                width: 50%;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 15px;
+                }   
+            }
+        }
+    }
+}
+
+
+@media (max-width: 815px) {
     .wrapper-project {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50%;
-        height: 100%;
-        max-width: 1440px;
-        border-radius: 10px;
-        margin: 0 auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    
+        display: block;
+        width: 90%;
+        margin: 30px 20px 30px 20px;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 30px auto;
+        transform: translate(0, 0);
+
         .img-project {
             width: 100%;
-            height: 100%;
-            background-image: url(../images/image-product-desktop.jpg);
-            background-size: cover;
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
-        }
-    
-        .content-project {
-            width: 100%;
-            height: 100%;
-            padding: 30px;
-            border-top-right-radius: 8px;
-            border-bottom-right-radius: 8px;
-            background-color: $white;
-    
-            h4 {
-                font-family: $font-primary;
-                text-transform: uppercase;
-                color: $dark-grayish-blue;
-                font-weight: 500;
-                letter-spacing: 4px;
-                margin-bottom: 20px;
-                font-size: 18px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            
+            img {
+                content: url(../images/image-product-mobile.jpg);
+                width: 100%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 0;
             }
+        }
+
+        .content-project {
+            padding: 30px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            margin-top: -4px;
 
             h2 {
-                font-family: $font-secondary;
-                font-size: 48px;
-                text-align: left;
-                line-height: 50px;
-                margin-bottom: 20px;
+                font-size: 34px;
+                line-height: 32px;
             }
 
             p {
-                color: $dark-grayish-blue;
-                font-family: $font-primary;
-                line-height: 30px;
-                font-size: 18px;
+                font-size: 14px;
+                line-height: 22px;
             }
 
             .price-wrapper {
                 display: flex;
-
+                align-items: center;
+                margin-bottom: 30px;
+    
                 span {
+    
                     &:first-child {
-                        font-size: 50px;
-                        font-family: $font-secondary;
-                        color: $dark-cyan;
+                        font-size: 30px;
                     }
+    
+                    &:last-child {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .submit {
+                font-family: $font-primary;
+                width: 100%;
+                height: 60px;
+                border-radius: 10px;
+                background-color: $dark-cyan;
+                color: $white;
+                font-size: 16px;
+                border: none;
+    
+                .button-wrapper {
+                    width: 50%;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 22px;
+                        height: 22px;
+                        margin-right: 15px;
+                    }   
                 }
             }
         }
     }
-
-
 }
+
+
+    
