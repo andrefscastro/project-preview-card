@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  width: 100%;
+  background-color: hsl(30deg, 38%, 92%);
+}
+
+main .wrapper-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  max-width: 1440px;
+  border-radius: 10px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+main .wrapper-project .img-project {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/image-product-desktop.jpg);
+  background-size: cover;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+main .wrapper-project .content-project {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: hsl(0deg, 0%, 100%);
+}
+main .wrapper-project .content-project h4 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: hsl(228deg, 12%, 48%);
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+main .wrapper-project .content-project h2 {
+  font-family: "Fraunces", serif;
+  font-size: 48px;
+  text-align: left;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+main .wrapper-project .content-project p {
+  color: hsl(228deg, 12%, 48%);
+  font-family: "Montserrat", sans-serif;
+  line-height: 30px;
+  font-size: 18px;
+}
+main .wrapper-project .content-project .price-wrapper {
+  display: flex;
+}
+main .wrapper-project .content-project .price-wrapper span:first-child {
+  font-size: 50px;
+  font-family: "Fraunces", serif;
+  color: hsl(158deg, 36%, 37%);
+}/*# sourceMappingURL=styles.css.map */
